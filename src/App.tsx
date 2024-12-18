@@ -8,7 +8,6 @@ import './App.css';
 
 const App: React.FC = () => {
   const [terminals, setTerminals] = useState<number[]>([]);
-  const [currentSection, setCurrentSection] = useState('home');
   const [showHelp, setShowHelp] = useState(false);
 
   const addTerminal = () => {
@@ -26,7 +25,6 @@ const App: React.FC = () => {
         return 'blog projects socials resume home';
       case 'cd':
         if (['blog', 'projects', 'socials', 'resume', 'home'].includes(arg)) {
-          setCurrentSection(arg);
           if (arg === 'home') {
             document.getElementById('home')?.scrollIntoView({ 
               behavior: 'smooth', 
@@ -82,7 +80,7 @@ const App: React.FC = () => {
       <div className="w-full overflow-y-auto">
         <div className="p-8">
           {/* Profile Section */}
-          <div id="home" className="flex gap-8 mt-40 pt-16">
+          <div id="home" className="flex gap-8 mt-16">
             <div className="w-1/3">
               <img 
                 src="https://gateway.pinata.cloud/ipfs/Qmc9kNtwqJZqDpyaEteioBkfPfdN9WQFP41s6MzJv1oKdm" 
