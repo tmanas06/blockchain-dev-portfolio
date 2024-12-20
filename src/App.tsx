@@ -55,7 +55,7 @@ const App: React.FC = () => {
         </ul>
         <div className="mt-4 p-3 border border-[#00ff00] bg-black bg-opacity-40 rounded">
           <p className="text-sm">
-            <span className="text-yellow-400">Note:</span> Navigation between sections is only possible using terminal commands. 
+            <span className="text-yellow-400">Note:</span> Navigation between sections can be done using terminal commands. 
             Use <span className="font-bold">cd [section]</span> to move between different sections of the page.
           </p>
         </div>
