@@ -6,14 +6,20 @@ const Blog: React.FC = () => {
       <h2 className="text-2xl mb-8">Blog Posts</h2>
       <div className="space-y-6">
         <div className="border border-[#00ff00] p-4 rounded">
-          <h3 className="text-xl mb-2">Understanding Zero-Knowledge Proofs</h3>
-          <p>An introduction to ZK-proofs and their applications in blockchain...</p>
+          <h3 className="text-xl mb-2">Deep Dive into CosmWasm Contract Standards: CW20, CW721, CW4, and CW3</h3>
+          <p>An introduction to CosmWasm Contract Standards in blockchain...</p>
         </div>
         <div className="border border-[#00ff00] p-4 rounded">
-          <h3 className="text-xl mb-2">Securing Smart Contracts</h3>
-          <p>Best practices for writing secure smart contracts...</p>
+          <h3 className="text-xl mb-2">Oraichain Architecture</h3>
+          <p>In-Depth Overview of Oraichain Architecture</p>
         </div>
       </div>
+      <footer className="mt-8">
+        <p className="text-lg font-bold">Check out my blog:</p>
+        <p>
+          <a href="https://techieresearch.blogspot.com/" className="text-blue-500 underline text-xl">Techie Research</a>
+        </p>
+      </footer>
     </div>
   );
 };

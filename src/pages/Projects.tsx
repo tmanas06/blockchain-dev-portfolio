@@ -42,7 +42,7 @@ const Projects: React.FC = () => {
               rel="noopener noreferrer"
               className="text-[#00ff00] hover:text-green-400"
             >
-              View Source →
+              <span className="text-green-400">View Source</span> → <span className="text-blue-500">View Project</span>
             </a>
           </div>
         ))}
