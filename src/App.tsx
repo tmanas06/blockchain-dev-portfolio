@@ -77,7 +77,7 @@ const App: React.FC = () => {
       </div>
 
       {/* Main Scrollable Content */}
-      <div className="w-full overflow-y-auto">
+      <div className="w-full ">
         <div className="p-8">
           {/* Profile Section */}
           <div id="home" className="flex gap-8 mt-16">
@@ -127,17 +127,19 @@ const App: React.FC = () => {
 
       {/* Terminal Overlay */}
       <div className="fixed inset-0 pointer-events-none z-40">
-        <div className="relative w-full h-full pointer-events-auto">
-          {terminals.map((id) => (
-            <Terminal 
-              key={id} 
-              id={id} 
-              handleCommand={handleCommand} 
-              closeTerminal={() => closeTerminal(id)}
-            />
-          ))}
-        </div>
+  <div className="relative w-full h-full">
+    {terminals.map((id) => (
+      <div key={id} className="pointer-events-auto">
+        <Terminal 
+          id={id} 
+          handleCommand={handleCommand} 
+          closeTerminal={() => closeTerminal(id)}
+        />
       </div>
+    ))}
+  </div>
+</div>
+
 
       {/* Fixed Terminal Button and Help */}
       <div className="fixed bottom-0 left-0 right-0 h-16 bg-[#1e1e2e] flex justify-center items-center gap-4 z-50">
