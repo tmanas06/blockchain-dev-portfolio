@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import Terminal from './components/Terminal';
 import Socials from './components/Socials';
@@ -70,9 +71,7 @@ const App: React.FC = () => {
   );
 
   return (
-    <div className="min-h-screen bg-black text-[#00ff00] font-mono p-8">
-      
-
+    <div className="min-h-screen bg-black">
       {/* Fixed Social Icons */}
       <div className="fixed top-4 left-4 z-50">
         <Socials />
@@ -93,8 +92,6 @@ const App: React.FC = () => {
             
             <div className="w-2/3 text-[#00ff00] font-mono">
               <div className="space-y-4">
-                <h1 className="text-3xl text-[#00ff00] text-center mt-4">Portifolio</h1>
-                <div className="border-t border-[#00ff00] my-4 w-full" />
                 <p>
                   Forward-thinking developer with expertise in blockchain, cybersecurity, 
                   and full-stack development. I am passionate about building secure and 
@@ -130,19 +127,20 @@ const App: React.FC = () => {
       </div>
 
       {/* Terminal Overlay */}
-      <div className="fixed inset-x-0 bottom-0 pointer-events-none z-40">
-        <div className="relative w-full h-full">
-          {terminals.map((id) => (
-            <div key={id} className="pointer-events-auto">
-              <Terminal 
-                id={id} 
-                handleCommand={handleCommand} 
-                closeTerminal={() => closeTerminal(id)}
-              />
-            </div>
-          ))}
-        </div>
+      <div className="fixed inset-0 pointer-events-none z-40">
+  <div className="relative w-full h-full">
+    {terminals.map((id) => (
+      <div key={id} className="pointer-events-auto">
+        <Terminal 
+          id={id} 
+          handleCommand={handleCommand} 
+          closeTerminal={() => closeTerminal(id)}
+        />
       </div>
+    ))}
+  </div>
+</div>
+
 
       {/* Fixed Terminal Button and Help */}
       <div className="fixed bottom-0 left-0 right-0 h-16 bg-[#1e1e2e] flex justify-center items-center gap-4 z-50">

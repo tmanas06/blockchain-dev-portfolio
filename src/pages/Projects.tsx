@@ -20,6 +20,7 @@ const Projects: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-black text-[#00ff00] font-mono p-8">
+      <h1 className="text-3xl mb-8">Portifolio</h1>
       <h1 className="text-2xl mb-8">~/projects $</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((project, index) => (
@@ -36,6 +37,16 @@ const Projects: React.FC = () => {
                 ))}
               </div>
             </div>
+            {project.Website && (
+              <a 
+                href={project.Website} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-blue-500 underline"
+              >
+                View Project Website
+              </a>
+            )}
             <a 
               href={project.github}
               target="_blank"
