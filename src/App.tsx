@@ -11,16 +11,11 @@ const App: React.FC = () => {
   const [showHelp, setShowHelp] = useState(false);
 
   const addTerminal = () => {
-    setTerminals([...terminals, terminals.length]);
+    setTerminals(prevTerminals => [...prevTerminals, prevTerminals.length]);
   };
 
   const closeTerminal = (id: number) => {
-    console.log(`Closing terminal with id: ${id}`);
-    setTerminals(prevTerminals => {
-      const updatedTerminals = prevTerminals.filter(t => t !== id);
-      console.log('Updated terminals:', updatedTerminals);
-      return updatedTerminals;
-    });
+    setTerminals(terminals.filter(t => t !== id));
   };
 
   const handleCommand = (command: string) => {
@@ -168,15 +163,17 @@ const App: React.FC = () => {
       {showHelp && helpContent}
 
       {/* Additional Styles for Text Size and Font */}
-      <style jsx>{`
-        .font-mono {
-          font-family: 'Courier New', Courier, monospace; /* Change to your desired font */
-          font-size: 1.5rem; /* Increase text size */
-        }
-        .terminal-text {
-          font-size: 1.5rem; /* Increase terminal text size */
-        }
-      `}</style>
+      <style>
+        {`
+          .font-mono {
+            font-family: 'Courier New', Courier, monospace; /* Change to your desired font */
+            font-size: 1.5rem; /* Increase text size */
+          }
+          .terminal-text {
+            font-size: 1.5rem; /* Increase terminal text size */
+          }
+        `}
+      </style>
     </div>
   );
 };
