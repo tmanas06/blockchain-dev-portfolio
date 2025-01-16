@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Terminal from './components/Terminal';
 import Socials from './components/Socials';
@@ -16,7 +15,12 @@ const App: React.FC = () => {
   };
 
   const closeTerminal = (id: number) => {
-    setTerminals(terminals.filter(t => t !== id));
+    console.log(`Closing terminal with id: ${id}`);
+    setTerminals(prevTerminals => {
+      const updatedTerminals = prevTerminals.filter(t => t !== id);
+      console.log('Updated terminals:', updatedTerminals);
+      return updatedTerminals;
+    });
   };
 
   const handleCommand = (command: string) => {
@@ -71,7 +75,9 @@ const App: React.FC = () => {
   );
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-black text-[#00ff00] font-mono p-8">
+      {/* Main Header */}
+
       {/* Fixed Social Icons */}
       <div className="fixed top-4 left-4 z-50">
         <Socials />
@@ -80,6 +86,7 @@ const App: React.FC = () => {
       {/* Main Scrollable Content */}
       <div className="w-full ">
         <div className="p-8">
+      <h1 className="text-6xl mb-8 text-blue-500 font-bold text-center">Portfolio</h1>
           {/* Profile Section */}
           <div id="home" className="flex gap-8 mt-16">
             <div className="w-1/3">
@@ -127,20 +134,19 @@ const App: React.FC = () => {
       </div>
 
       {/* Terminal Overlay */}
-      <div className="fixed inset-0 pointer-events-none z-40">
-  <div className="relative w-full h-full">
-    {terminals.map((id) => (
-      <div key={id} className="pointer-events-auto">
-        <Terminal 
-          id={id} 
-          handleCommand={handleCommand} 
-          closeTerminal={() => closeTerminal(id)}
-        />
+      <div className="fixed inset-x-0 bottom-0 z-[100]">
+        <div className="relative w-full h-full">
+          {terminals.map((id) => (
+            <div key={id} className="pointer-events-auto">
+              <Terminal 
+                id={id} 
+                handleCommand={handleCommand} 
+                closeTerminal={() => closeTerminal(id)}
+              />
+            </div>
+          ))}
+        </div>
       </div>
-    ))}
-  </div>
-</div>
-
 
       {/* Fixed Terminal Button and Help */}
       <div className="fixed bottom-0 left-0 right-0 h-16 bg-[#1e1e2e] flex justify-center items-center gap-4 z-50">
@@ -160,6 +166,17 @@ const App: React.FC = () => {
 
       {/* Help Modal */}
       {showHelp && helpContent}
+
+      {/* Additional Styles for Text Size and Font */}
+      <style jsx>{`
+        .font-mono {
+          font-family: 'Courier New', Courier, monospace; /* Change to your desired font */
+          font-size: 1.2rem; /* Increase text size */
+        }
+        .terminal-text {
+          font-size: 1.5rem; /* Increase terminal text size */
+        }
+      `}</style>
     </div>
   );
 };

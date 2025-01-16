@@ -11,6 +11,19 @@ const Projects: React.FC = () => {
       github: "https://github.com/tmanas06/IITB_Hackathon",
     },
     {
+      title: "Deep Revenue Sharing System",
+      description: "Minimum Viable Product (MVP) for a deep revenue sharing system. This platform enables automatic split payment disbursement for referrals in a multi-level marketing (MLM) scheme. It provides salespeople with a dashboard to view their statistics, leaderboard rankings, and allows businesses to register and launch product pages with revenue split percentages.",
+      tech: ["MERN Stack"],
+      github: "https://github.com/tmanas06/Tsoc-project"
+    },
+    {
+      title: "Flight Application",
+      description: "A decentralized Flight Application using Wallet Connector",
+      tech: ["MERN Stack"],
+      Website:"https://flight-ticketing-dapp.vercel.app/",
+      github: "https://github.com/tmanas06/Flight_ticketing_Dapp"
+    },
+    {
       title: "Music application",
       description: "Music application with Real-time Chat feature",
       tech: ["MERN Stack"],
@@ -20,12 +33,11 @@ const Projects: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-black text-[#00ff00] font-mono p-8">
-      <h1 className="text-3xl mb-8">Portifolio</h1>
       <h1 className="text-2xl mb-8">~/projects $</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((project, index) => (
           <div key={index} className="border border-[#00ff00] p-4 rounded-md">
-            <h2 className="text-xl mb-2">{project.title}</h2>
+            <h2 className="text-xl mb-2 text-yellow-500">{project.title}</h2>
             <p className="mb-4">{project.description}</p>
             <div className="mb-4">
               <h3 className="text-sm mb-2">Tech Stack:</h3>
