@@ -2,55 +2,59 @@ import React from 'react';
 
 const Resume: React.FC = () => {
   return (
-    <div className="min-h-screen bg-black text-[#00ff00] font-mono p-8">
+    <div className="min-h-screen bg-black text-[#00ff00] font-sans p-8" style={{ lineHeight: '1.5' }}>
       <h1 className="text-2xl mb-8">~/resume $</h1>
       <div className="space-y-8">
         <section className="border border-[#00ff00] p-4 rounded-md">
           <h2 className="text-xl mb-4 font-bold">Technical Skills</h2>
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <h3 className="text-sm mb-2 font-bold">Languages & Frameworks</h3>
+              <h3 className="text-lg mb-2 font-bold">Languages & Frameworks</h3>
               <ul className="list-disc list-inside">
                 <li>JavaScript/TypeScript</li>
                 <li>Solidity</li>
                 <li>React.js</li>
                 <li>Node.js</li>
+                <li>C</li>
+                <li>Java</li>
+                <li>Python</li>
               </ul>
             </div>
             <div>
-              <h3 className="text-sm mb-2 font-bold">Tools & Technologies</h3>
+              <h3 className="text-lg mb-2 font-bold">Tools & Technologies</h3>
               <ul className="list-disc list-inside">
                 <li>Web3.js/Ethers.js</li>
                 <li>MongoDB</li>
-                <li>Docker</li>
+                <li>Pinata</li>
                 <li>Git</li>
+                <li>linux</li>
               </ul>
             </div>
           </div>
         </section>
 
-        <section className="border border-[#00bfff] p-4 rounded-md">
-          <h2 className="text-xl mb-4 text-[#00fff7] font-bold">Experience</h2>
+        <section className="border border-[#00ff00] p-4 rounded-md">
+          <h2 className="text-xl mb-4 font-bold">Experience</h2>
           <div className="space-y-4 text-[#00fff7] font-bold">
             <div>
               <h3 className="font-bold">Timechain Labs (Blockchain Developer)</h3>
-              <p className="text-sm">Developed decentralized applications, contributing to the advancement of blockchain technology and its practical applications.</p>
+              <p>Developed decentralized applications, contributing to the advancement of blockchain technology and its practical applications.</p>
             </div>
             <div>
               <h3 className="font-bold">Wallet Hunter ✈️ Token 2049 (Full Stack Developer)</h3>
-              <p className="text-sm">Worked as a Full Stack Developer focusing on Python, API integration, and automation.</p>
+              <p>Worked as a Full Stack Developer focusing on Python, API integration, and automation.</p>
             </div>
             <div>
               <h3 className="font-bold">Oraichain Labs (Evangelist)</h3>
-              <p className="text-sm">Advocated for innovative blockchain solutions, promoting the adoption of cutting-edge technologies.</p>
+              <p>Advocated for innovative blockchain solutions, promoting the adoption of cutting-edge technologies.</p>
             </div>
             <div>
               <h3 className="font-bold">Threat Prism (Cybersecurity Intern)</h3>
-              <p className="text-sm">Gained hands-on experience in implementing cybersecurity strategies, strengthening organizational defenses against potential threats.</p>
+              <p>Gained hands-on experience in implementing cybersecurity strategies, strengthening organizational defenses against potential threats.</p>
             </div>
             <div>
               <h3 className="font-bold">Snowflake (Squad Member)</h3>
-              <p className="text-sm">Part of the Snowflake community in Hyderabad.</p>
+              <p>Part of the Snowflake community in Hyderabad.</p>
             </div>
           </div>
         </section>

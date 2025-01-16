@@ -134,19 +134,19 @@ const App: React.FC = () => {
       </div>
 
       {/* Terminal Overlay */}
-      <div className="fixed inset-x-0 bottom-0 z-[100]">
-        <div className="relative w-full h-full">
-          {terminals.map((id) => (
-            <div key={id} className="pointer-events-auto">
-              <Terminal 
-                id={id} 
-                handleCommand={handleCommand} 
-                closeTerminal={() => closeTerminal(id)}
-              />
-            </div>
-          ))}
-        </div>
+      <div className="fixed inset-0 pointer-events-none z-40">
+  <div className="relative w-full h-full">
+    {terminals.map((id) => (
+      <div key={id} className="pointer-events-auto">
+        <Terminal 
+          id={id} 
+          handleCommand={handleCommand} 
+          closeTerminal={() => closeTerminal(id)}
+        />
       </div>
+    ))}
+  </div>
+</div>
 
       {/* Fixed Terminal Button and Help */}
       <div className="fixed bottom-0 left-0 right-0 h-16 bg-[#1e1e2e] flex justify-center items-center gap-4 z-50">
@@ -171,7 +171,7 @@ const App: React.FC = () => {
       <style jsx>{`
         .font-mono {
           font-family: 'Courier New', Courier, monospace; /* Change to your desired font */
-          font-size: 1.2rem; /* Increase text size */
+          font-size: 1.5rem; /* Increase text size */
         }
         .terminal-text {
           font-size: 1.5rem; /* Increase terminal text size */
