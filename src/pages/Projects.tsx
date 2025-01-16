@@ -13,15 +13,33 @@ const Projects: React.FC = () => {
     {
       title: "Deep Revenue Sharing System",
       description: "Minimum Viable Product (MVP) for a deep revenue sharing system. This platform enables automatic split payment disbursement for referrals in a multi-level marketing (MLM) scheme. It provides salespeople with a dashboard to view their statistics, leaderboard rankings, and allows businesses to register and launch product pages with revenue split percentages.",
-      tech: ["MERN Stack"],
+      tech: ["svelte","vercel","Nest JS"],
+      github: "https://github.com/tmanas06/Tsoc-project"
+    },
+    {
+      title: "BSV wallet integration svelte",
+      description: "Timechain labs, BSV wallet integrated using svelte web application",
+      tech: ["svelte","bsv blockchain","vercel","Nest JS","etc"],
       github: "https://github.com/tmanas06/Tsoc-project"
     },
     {
       title: "Flight Application",
       description: "A decentralized Flight Application using Wallet Connector",
-      tech: ["MERN Stack"],
+      tech: ["React", "Node.js", "Wagmi","metamask wallet","Pinate","sepolia-testnet","wallet connector"],
       Website:"https://flight-ticketing-dapp.vercel.app/",
       github: "https://github.com/tmanas06/Flight_ticketing_Dapp"
+    },
+    {
+      title: "Attendance register",
+      description: "A simple Attendance register implemented in aleph zero blockchain",
+      tech: ["rust","Aleph zero testnet"],
+      github: "https://github.com/tmanas06/attendance_registry"
+    },
+    {
+      title: "To-do-list",
+      description: "A simple to-do list application",
+      tech: ["solidity","remix ide"],
+      github: "https://github.com/tmanas06/Tsoc-project"
     },
     {
       title: "Music application",
