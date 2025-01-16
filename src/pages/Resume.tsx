@@ -18,6 +18,7 @@ const Resume: React.FC = () => {
                 <li>C</li>
                 <li>Java</li>
                 <li>Python</li>
+                <li>html,css,js</li>
               </ul>
             </div>
             <div>
