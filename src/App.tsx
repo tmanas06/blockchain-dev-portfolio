@@ -116,14 +116,15 @@ const App: React.FC = () => {
           </div>
 
           {/* Sections */}
-          <section id="blog" className="min-h-screen py-16">
-            <Blog />
-          </section>
+          
           <section id="projects" className="min-h-screen py-16">
             <Projects />
           </section>
           <section id="resume" className="min-h-screen py-16">
             <Resume />
+          </section>
+          <section id="blog" className="min-h-screen py-16">
+            <Blog />
           </section>
         </div>
       </div>
