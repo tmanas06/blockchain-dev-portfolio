@@ -1,3 +1,3 @@
 # Portifolio
 
-Deployed on weblink: https://devportfolio-indol.vercel.app/
+Deployed on weblink: https://portfolio-manas.vercel.app/
